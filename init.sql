@@ -1,13 +1,9 @@
-CREATE TABLE incorrect_transcription_suggestions (
+CREATE TYPE STATUS AS ENUM ('pending', 'ignored', 'corrected');
+CREATE TABLE transcription_issues (
     id SERIAL PRIMARY KEY,
-    episode_line TEXT NOT NULL,
-    correction_suggestion TEXT NOT NULL,
-    status TEXT DEFAULT 'pending'::TEXT,
-    episode_id INTEGER NOT NULL,
+    episode_id TEXT NOT NULL,
     line_number INTEGER NOT NULL,
-    suggestion TEXT NOT NULL
-
+    issue TEXT NOT NULL,
+    status STATUS DEFAULT 'pending'::STATUS
 );
-
-
     
