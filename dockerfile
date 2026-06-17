@@ -1,5 +1,5 @@
 # Use the official PostgreSQL image from Docker Hub
-FROM postgres:latest
+FROM postgres:18.4
 # Optional: Set a custom PostgreSQL configuration file
 # COPY postgresql.conf /etc/postgresql/postgresql.conf
 
