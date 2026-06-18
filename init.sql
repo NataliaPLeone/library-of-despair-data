@@ -4,6 +4,5 @@ CREATE TABLE transcription_issues (
     episode_id TEXT NOT NULL,
     line_number INTEGER NOT NULL,
     issue TEXT NOT NULL,
-    status STATUS DEFAULT 'pending'::STATUS
+    status STATUS DEFAULT 'pending'::STATUS NOT NULL
 );
-    
